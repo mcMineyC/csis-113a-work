@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -61,11 +60,3 @@ double fToC(double f) { return (f - 32.0) * (double)(5 / 9); }
 double cToF(double c) { return c * (double)(9 / 5) + 32.0; }
 double fToK(double f) { return (f - 32.0) * (double)(5 / 9) - 273.15; }
 double cToK(double c) { return c - 273.15; }
-=======
-#include <iostream>
-using namespace std;
-
-int main() {
-  return 0;
-}
->>>>>>> refs/remotes/origin/main

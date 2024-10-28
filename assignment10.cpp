@@ -16,24 +16,27 @@ int main() {
     choice = getMenuChoice();
     switch (choice) {
     case 'A':
-      cout << "Enter fahrenheit to convert: " << endl;
+      cout << "Enter fahrenheit to convert: ";
       cin >> in;
       cout << "Celsius is: " << fToC(in) << endl;
       break;
     case 'B':
-      cout << "Enter celsius to convert: " << endl;
+      cout << "Enter celsius to convert: ";
       cin >> in;
       cout << "Fahrenheit is: " << cToF(in) << endl;
       break;
     case 'C':
-      cout << "Enter fahrenheit to convert: " << endl;
+      cout << "Enter fahrenheit to convert: ";
       cin >> in;
       cout << "Kelvin is: " << fToK(in) << endl;
       break;
     case 'D':
-      cout << "Enter celsius to convert: " << endl;
+      cout << "Enter celsius to convert: ";
       cin >> in;
       cout << "Kelvin is: " << cToK(in) << endl;
+      break;
+    default:
+      cout << "Invalid choice" << endl;
       break;
     }
   } while (choice != 'Q');
@@ -56,7 +59,7 @@ char getMenuChoice() {
   choice = toupper(choice);
   return choice;
 }
-double fToC(double f) { return (f - 32.0) * (double)(5 / 9); }
-double cToF(double c) { return c * (double)(9 / 5) + 32.0; }
-double fToK(double f) { return (f - 32.0) * (double)(5 / 9) - 273.15; }
-double cToK(double c) { return c - 273.15; }
+double fToC(double f) { return (f - 32.0) * (5.0 / 9.0); }
+double cToF(double c) { return c * (9.0 / 5.0) + 32.0; }
+double fToK(double f) { return (f - 32.0) * (5.0 / 9.0) + 273.15; }
+double cToK(double c) { return c + 273.15; }

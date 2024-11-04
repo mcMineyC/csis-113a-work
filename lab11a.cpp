@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-// song artist
+// playlist length
 int main() {
   string playlists[5];
   int length[5];

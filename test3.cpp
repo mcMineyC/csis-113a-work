@@ -1,8 +1,17 @@
 #include <iostream>
 using namespace std;
-double grossPay(int hours, double rate);
+struct FUEL {
+  string fuelGrade;
+  int gallons;
+  double price;
+};
+
 int main() {
-  cout << "Gross Pay is " << grossPay(40, 12.50) << endl; // should print 580
-  cout << "Gross Pay is " << grossPay(43, 12.50) << endl; // should print 537.5
+  FUEL tank1;
+  tank1.fuelGrade = "Plus";
+  tank1.gallons = 42;
+  tank1.price = 268.38;
+  cout << tank1.gallons << " of gas costs ~$" << tank1.price
+       << " in Southern California" << endl;
+  return 0;
 }
-double grossPay(int hours, double rate) { return hours * rate; }
